@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Strength Checker | Secure Your Accounts</title>
+    <meta name="description" content="Check your password strength in real-time. See how fast it can be hacked, get breach alerts, and generate secure passwords.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🔒 Password Strength Checker</h1>
+        <p class="subtitle">See how fast your password can be hacked</p>
+
+        <div class="input-group">
+            <input type="password" id="password" placeholder="Enter your password" autocomplete="off">
+            <button id="togglePassword" class="toggle-btn">👁️</button>
+        </div>
+
+        <div class="strength-meter">
+            <div class="strength-bar" id="strengthBar"></div>
+        </div>
+
+        <div class="results">
+            <div class="score">
+                <span>Strength Score:</span>
+                <strong id="scoreValue">0</strong><span>/100</span>
+            </div>
+            <div class="crack-time">
+                <span>Time to crack:</span>
+                <strong id="crackTime">—</strong>
+            </div>
+            <div class="strength-label">
+                <span>Strength:</span>
+                <strong id="strengthLabel">Very Weak</strong>
+            </div>
+        </div>
+
+        <div class="suggestions" id="suggestions">
+            <h3>💡 Suggestions</h3>
+            <ul id="suggestionsList">
+                <li>Enter a password to see suggestions</li>
+            </ul>
+        </div>
+
+        <div class="actions">
+            <button id="generateBtn" class="btn">🎲 Generate Strong Password</button>
+            <button id="breachCheckBtn" class="btn secondary">🔍 Check Breach Status</button>
+        </div>
+
+        <div id="breachResult" class="breach-result"></div>
+
+        <footer>
+            <p>Your password never leaves your browser. All checks are local.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
